@@ -1,24 +1,26 @@
 Package: pbdXGB
 Title: Programming with Big Data -- Extreme Gradient Boosting
 Version: 0.90.0.2
-Date: 2019-11-09
+Date: 2020-02-15
 Authors@R: c(
-  person("Drew", "Schmidt", role = "aut",
-         comment = "pbdXGB implementation"),
   person("Wei-Chen", "Chen", role = c("aut", "cre"),
          email = "wccsnow@gmail.com",
-         comment = "pbdXGB implementation"),
+         comment = "pbdXGB and MPI C implementation"),
+  person("Drew", "Schmidt", role = "aut",
+         comment = "pbdXGB examples and rabit C api"),
   person("Tianqi", "Chen", role = c("aut"),
-         comment = "xgboost R implementation"),
-  person("xgboost R contributors", role = c("cph"),
-         comment = "some functions are modified from xgboost R package"),
+         comment = "xgboost implementation"),
+  person("Tong", "He", role = c("aut"),
+         comment = "xgboost implementation"),
+  person("xgboost R authors and contributors", role = c("cph"),
+         comment = "some functions are modified from xgboost package"),
   person("XGBoost contributors", role = c("cph"),
          comment = "base XGBoost implementation"),
   person("R Core team", role = "ctb",
          comment = "some functions are modified from R")
   )
 Depends: R (>= 3.6.0), xgboost, pbdMPI
-Imports: Matrix, data.table, stringi, utils, stats, methods, magrittr
+Imports: Matrix, stringi, methods, stats, data.table
 LazyLoad: yes
 LazyData: yes
 Description: An pbdR <https://pbdr.org> interface to xgboost with MPI C library.
@@ -37,4 +39,4 @@ MailingList: Please send questions and comments regarding pbdR to
         RBigData@gmail.com
 NeedsCompilation: yes
 Maintainer: Wei-Chen Chen <wccsnow@gmail.com>
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
